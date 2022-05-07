@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practicing css</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .card {
+        padding: 20px;
+        margin: 20px;
+        background-color: green;
+        width: 100px;
+        height: 100px;
+        text-transform: capitalize;
+        font-family: monospace;
+        font-size: 18px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+          0 6px 6px rgba(0, 0, 0, 0.23);
+        border-radius: 10px;
+        border-width: 5px;
+      }
+      .card:hover {
+        transform: scale(1.5);
+        position: relative;
+        top: 20px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">This is card 1</div>
+      <div class="card">This is card 2</div>
+      <div class="card">This is card 3</div>
+      <div class="card">This is card 4</div>
+      <div class="card">This is card 5</div>
+      <div class="card">This is card 6</div>
+      <div class="card">This is card 7</div>
+      <div class="card">This is card 8</div>
+      <div class="card">This is card 9</div>
+      <div class="card">This is card 10</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ball Animation</title>
+    <style>
+      .ball {
+        height: 150px;
+        width: 150px;
+        margin: 100px auto;
+        border-radius: 50%;
+        background-color: orange;
+        position: relative;
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+      }
+      .ball:hover {
+        background-color: orangered;
+        animation-duration: 2s;
+      }
+      @keyframes bounce {
+        0% {
+          top: 0px;
+        }
+        50% {
+          top: 250px;
+          width: 270px;
+          height: 100px;
+        }
+        100% {
+          top: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball"></div>
+  </body>
+</html>

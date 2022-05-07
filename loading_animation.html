@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rodan Ramdam" />
+    <title>Loading Animation</title>
+    <style>
+      .loading-bar {
+        border: solid;
+        margin: 20px auto;
+        border-width: 1px;
+        background-color: white;
+        width: 200px;
+        height: 20px;
+      }
+      .progress {
+        background-color: green;
+        width: 0px;
+        height: 20px;
+        animation-name: progress;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+      }
+      .progress::after {
+        content: "";
+        width: 0px;
+        height: 20px;
+        position: absolute;
+        animation-name: progress;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        top: 20px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        z-index: 2;
+      }
+      @keyframes progress {
+        0% {
+          width: 0px;
+          content: "0%";
+        }
+        25% {
+          width: 50px;
+          content: "25%";
+        }
+        50% {
+          width: 100px;
+          content: "50%";
+        }
+        75% {
+          width: 150px;
+          content: "75%";
+        }
+        100% {
+          width: 200px;
+          content: "100%";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading-bar">
+      <div class="progress"></div>
+    </div>
+  </body>
+</html>

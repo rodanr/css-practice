@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beating heart</title>
+    <style>
+      .heart {
+        height: 100px;
+        width: 100px;
+        margin: 100px auto;
+        background-color: red;
+        position: relative;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        transform: rotate(-45deg);
+        animation-name: beat;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+      }
+      .heart::after {
+        position: absolute;
+        content: "";
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: red;
+        left: 50px;
+      }
+      .heart::before {
+        content: "";
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: red;
+        top: -50px;
+      }
+      div {
+        opacity: 0.7;
+      }
+      @keyframes beat {
+        0% {
+          transform: scale(1) rotate(-45deg);
+        }
+        50% {
+          transform: scale(0.5) rotate(-45deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heart"></div>
+  </body>
+</html>
